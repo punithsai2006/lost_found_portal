@@ -1,23 +1,3 @@
-Perfect! I will create a **professional, complete README.md** for your GitHub repository — the kind used in real developer portfolios and company projects.
-
-This README will include:
-
-✔ Project description
-✔ Features
-✔ Tech stack
-✔ Folder structure
-✔ Installation steps
-✔ Backend setup
-✔ Frontend setup
-✔ Database setup
-✔ Environment variables
-✔ API overview
-✔ Screenshots (placeholders—you can add later)
-
----
-
-# ✅ **Here is your full README.md (copy–paste into your repo root)**
-
 Create a file at:
 
 ```
@@ -47,7 +27,6 @@ This project enables users to report, search, and claim lost or found items effi
 
 * Report found items
 * Report lost items
-* Upload images
 * View all items
 * View item details
 
@@ -61,10 +40,6 @@ This project enables users to report, search, and claim lost or found items effi
 
 * Manage item categories
 * Manage campus locations
-
-### 🛎 Notifications (optional)
-
-* Email or in-app notifications for claims (future update)
 
 ---
 
@@ -81,7 +56,7 @@ This project enables users to report, search, and claim lost or found items effi
 
 * FastAPI
 * SQLAlchemy
-* MySQL
+* MySQL(Data Base)
 * JWT Authentication (python-jose)
 * Passlib (password hashing)
 

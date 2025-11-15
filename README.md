@@ -1,12 +1,3 @@
-Create a file at:
-
-```
-lost_found_portal/README.md
-```
-
-And paste this:
-
----
 
 # 📦 Lost & Found Portal
 

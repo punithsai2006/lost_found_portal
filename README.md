@@ -308,13 +308,24 @@ Pull requests are welcome!
 MIT License
 
 ---
+<img width="1896" height="884" alt="image" src="https://github.com/user-attachments/assets/db10c7fa-b400-438c-8c7c-d48db23dafc9" />
 
-# 🎉 Your README is ready!
+<img width="1899" height="877" alt="image" src="https://github.com/user-attachments/assets/03e302a6-8c88-4435-ac8d-357c29fb9f80" />
 
-If you'd like:
-✔ Add badges (Made with React, FastAPI, etc.)
-✔ Add project logo
-✔ Add deployment guide (Render, Vercel)
-✔ Add screenshots
+<img width="1895" height="885" alt="image" src="https://github.com/user-attachments/assets/7dcdc6dd-049f-40cd-8918-f33cc7dfbbb8" />
 
-Just tell me!
+<img width="1893" height="881" alt="image" src="https://github.com/user-attachments/assets/316b6a91-8fe9-48ce-9556-a0c482bf147e" />
+<img width="1919" height="883" alt="image" src="https://github.com/user-attachments/assets/fe1a25e5-8dbe-428a-a99f-4cdc0e382162" />
+
+<img width="1899" height="884" alt="image" src="https://github.com/user-attachments/assets/588b12c4-d9a4-42c1-8f6f-7b8fe978fce2" />
+
+<img width="1919" height="884" alt="image" src="https://github.com/user-attachments/assets/708b501d-9208-4a78-9792-41227d9fcb4d" />
+
+<img width="1919" height="888" alt="image" src="https://github.com/user-attachments/assets/39d35593-1ecc-45d1-9104-b40a933f84f5" />
+
+
+
+
+
+
+

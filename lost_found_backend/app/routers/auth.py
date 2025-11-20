@@ -22,6 +22,12 @@ router = APIRouter(prefix="/auth", tags=["Authentication"])
 @router.post("/register")
 def register(user: dict, db: Session = Depends(get_db)):
 
+    # Validate required fields
+    required_fields = ["name", "roll_number", "password"]
+    for field in required_fields:
+        if field not in user or not user[field]:
+            raise HTTPException(400, f"'{field}' is required")
+
     # Check roll number exists
     existing = (
         db.query(UserAccount)
@@ -34,14 +40,15 @@ def register(user: dict, db: Session = Depends(get_db)):
             detail="Roll number already registered"
         )
 
-    # Hash password
-    hashed_pw = get_password_hash(user["password"])
+    # FIX: Trim + enforce 72-char bcrypt limit
+    password = user["password"].strip()[:72]
+    hashed_pw = get_password_hash(password)
 
     # Create user account
     new_user = UserAccount(
-        name=user["name"],
+        name=user["name"].strip(),
         branch=user.get("branch"),
-        roll_number=user["roll_number"],
+        roll_number=user["roll_number"].strip(),
         school=user.get("school"),
         email=user.get("email"),
         phone=user.get("phone"),
@@ -65,8 +72,8 @@ def login(
     db: Session = Depends(get_db)
 ):
 
-    roll_number = form_data.username   # username = roll number
-    password = form_data.password
+    roll_number = form_data.username.strip()
+    password = form_data.password.strip()
 
     user = authenticate_user(db, roll_number, password)
 
@@ -76,6 +83,7 @@ def login(
             detail="Incorrect roll number or password"
         )
 
+    # JWT MUST include "sub"
     access_token = create_access_token(
         data={"sub": str(user.user_id)}
     )

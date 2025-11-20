@@ -36,6 +36,7 @@ def verify_password(plain_password: str, hashed_password: str):
 
 
 def get_password_hash(password: str):
+    # bcrypt only supports up to 72 bytes
     if len(password) > 72:
         password = password[:72]
     return pwd_context.hash(password)
@@ -80,8 +81,7 @@ async def get_current_user(token: str = Depends(oauth2_scheme), db: Session = De
         if user_id_str is None:
             raise credentials_exception
 
-        user_id = int(user_id_str)
-        token_data = TokenData(user_id=user_id)
+        token_data = TokenData(user_id=int(user_id_str))
 
     except Exception:
         raise credentials_exception
